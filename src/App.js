@@ -24,18 +24,29 @@ class App extends React.Component {
       <>
         {this.state.show && (
           <>
-            <p>name: {this.state.fullName}</p>
-            <p>bio: {this.state.bio}</p>
-            <img
-              src={this.state.imgSrc}
-              style={{ width: 300, height: 200 }}
-            ></img>
-            <p>profession: {this.state.profession}</p>
-            <p>{this.state.date}</p>
+            <p className="name" style={{ fontWeight: 700, fontSize: 14 }}>
+              name: {this.state.fullName}
+            </p>
+            <p style={{ fontWeight: 700, fontSize: 14 }}>
+              bio: {this.state.bio}
+            </p>
+            <p>
+              <img
+                src={this.state.imgSrc}
+                style={{ width: 300, height: 200 }}
+              ></img>
+            </p>
+            <p style={{ fontWeight: 700, fontSize: 14 }}>
+              profession: {this.state.profession}
+            </p>
+            <p style={{ fontWeight: 700, fontSize: 24 }}>{this.state.date}</p>
           </>
         )}
-
-        <button onClick={this.handleClick}>update state</button>
+        <p>
+          <button className="button" onClick={this.handleClick}>
+            update state
+          </button>
+        </p>
       </>
     );
   }
